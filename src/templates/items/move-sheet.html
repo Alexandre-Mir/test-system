@@ -1,0 +1,112 @@
+<form class="{{cssClass}} item-form flexcol" autocomplete="off">
+  <header class="sheet-header flexrow">
+      <div class="cell--image">
+          <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+        </div>
+      <div class="header-fields">
+        <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="{{localize "PBTA.Common.Name"}}"/></h1>
+      </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-navigation sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">{{localize "PBTA.Common.Description" }}</a>
+    <a class="item" data-tab="details">{{localize "PBTA.Common.Details" }}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+      {{!-- Description Tab --}}
+      <div class="tab" data-group="primary" data-tab="description">
+        <div class="resource">
+          <label>{{localize "PBTA.Common.Description"}}</label>
+          {{editor system.description target="system.description" button=true owner=owner editable=editable}}
+        </div>
+
+        {{#if system.moveResults}}
+          {{#each system.moveResults as |result key|}}
+            <div class="resource">
+              <label>{{result.label}}</label>
+              {{editor result.value target=result.rangeName button=true owner=../owner editable=../editable}}
+            </div>
+          {{/each}}
+        {{/if}}
+
+        <div class="resource">
+          <label>{{localize "PBTA.Choices"}}</label>
+          {{editor system.choices target="system.choices" button=true owner=owner editable=editable}}
+        </div>
+      </div>
+
+      {{!-- Details Tab --}}
+      <div class="tab" data-group="primary" data-tab="details">
+        <div class="resource">
+          <label>{{localize "PBTA.Roll"}}</label>
+          <select name="system.rollType" data-dtype="String">
+            {{#select system.rollType}}
+              <option value="">—</option>
+              {{#if system.stats}}
+                {{#each system.stats as |stat key|}}
+                  <option value="{{key}}">{{stat.label}}</option>
+                {{/each}}
+              {{/if}}
+            {{/select}}
+          </select>
+        </div>
+
+        {{#if (eq system.rollType 'formula')}}
+          <div class="resource">
+            <label>{{localize "PBTA.RollFormula"}}</label>
+            <input type="text" name="system.rollFormula" value="{{system.rollFormula}}" placeholder="ex: d6 + d8 + @stats.cool.value" data-dtype="String"/>
+          </div>
+        {{/if}}
+
+        <div class="resource">
+          <label>{{localize "PBTA.Modifier"}}</label>
+          <input type="text" name="system.rollMod" value="{{system.rollMod}}" data-dtype="Number"/>
+        </div>
+
+        <div class="resource">
+          <label>{{localize "PBTA.Uses"}}</label>
+          <input type="number" name="system.uses" value="{{system.uses}}" data-dtype="Number"/>
+        </div>
+
+        <div class="resource">
+          <label>{{localize "PBTA.Playbook"}}</label>
+          <select name="system.playbook">
+            {{#select system.playbook}}
+              <option value="">—</option>
+              {{#each system.playbooks as |playbook id|}}
+              <option value="{{playbook}}">{{playbook}}</option>
+              {{/each}}
+            {{/select}}
+          </select>
+        </div>
+
+        <div class="resource">
+          <label>{{localize "PBTA.MoveType"}}</label>
+          <select name="system.moveType" data-dtype="String">
+            {{#select system.moveType}}
+            <option value="">—</option>
+            {{#each system.moveTypes as |move key|}}
+            <option value="{{key}}">{{move.label}}</option>
+            {{/each}}
+            {{/select}}
+          </select>
+        </div>
+
+        <div class="resource">
+          <label>{{localize "PBTA.RequiresMove"}}</label>
+          <input type="text" name="system.requiresMove" value="{{system.requiresMove}}" data-dtype="String"/>
+        </div>
+
+        <div class="resource">
+          <label>{{localize "PBTA.MoveGroup"}}</label>
+          <input type="text" name="system.moveGroup" value="{{system.moveGroup}}" placeholder="ex: barbarian-armor" data-dtype="String"/>
+          <span class="help-text">{{localize "PBTA.MoveGroupHelp"}}</span>
+        </div>
+
+      </div>
+  </section>
+</form>

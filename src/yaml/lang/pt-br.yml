@@ -1,0 +1,152 @@
+Powered by the Apocalypse: Powered by the Apocalypse
+TYPES:
+  Item:
+    move: "Movimento"
+    npcMove: "Movimento de NPC"
+    equipment: "Equipamento"
+    playbook: "Cartilha"
+    tag: "Tag"
+PBTA:
+  title: Powered by the Apocalypse
+  description: Jogue qualquer sistema PbtA no FoundryVTT!
+  failure: Complicações (marque XP)
+  partial: Sucesso Parcial
+  success: Successo
+  Playbook: Arquétipo
+  Settings:
+    button:
+      help: Ajuda do Sistema Pbta e Tutorial
+    stats:
+      name: Atributos
+      hint: Insira uma lista de atributos/habilidades separadas por vírgula, como "For,Des,Con,Int,Sab,Car"
+    advForward:
+      name: Limpar VAN/DES depois das rolagens
+      hint: Se habilitado, escolhas de vantagem e desvantagem na ficha serão resetados ao normal após cada rolagem (similar a Adiante).
+    hideRollFormula:
+      name: "Esconder fórmulas de rolagem"
+      hint: "Esconde a seção de \"Rolar com a Fórmula\" nas fichas de personagem."
+    hideForward:
+      name: "Esconder Adiante"
+      hint: "Esconde a seção \"Adiante\" nas fichas de personagem."
+    hideOngoing:
+      name: "Esconder Constante"
+      hint: "Esconde a seção \"Constante\" nas fichas de personagem."
+    hideRollMode:
+      name: "Esconder Modo de Rolagem"
+      hint: "Esconde a seção \"Modo de Rolagem\" nas fichas de personagem."
+    hideUses:
+      name: "Esconder Usos"
+      hint: "Esconde os usos restantes de cada movimento no sumário de movimentos nas fichas de personagens."
+    itemIcons:
+      name: Habilitar ícones nos Itens
+      hint: Habilitar ícones visuais nos movimentos, magias e equipamentos nas fichas de personagem (requer Atualizar).
+    sheetConfig:
+      label: Configuração da Ficha Pbta
+      name: Configure as Fichas de Personagem
+      hint: Escolha a estrutura das Fichas de Personagem, como
+        atributos, habilidades e detalhes.
+      title: Configure as Fichas de Personagem
+      notes1: Bem vindo à versão Alpha do sistema Pbta!
+      notes2: Eventualmente teremos uma interface gráfica (GUI)
+        para fazer fichas de personagem, mas por agora você precisará inserir os dados da
+        ficha de personagem no formato TOML. Escrever em TOML é similar a trabalhar com
+        arquivos .ini, comuns em alterações de mods em jogos para PC.
+      notes3: 'Leia a documentação com link abaixo antes de configurar
+        sua ficha. Você também pode ir até o canal #powered-by-the-apocalypse do discord
+        principal do Foundry VTT para perguntas e assistência.'
+      saveConfiguration: Salvar Configuração
+      resetDefaults: Resetar aos Padrões
+      confirmChanges: Confirmar Alterações
+      confirm: Confirmar
+      confirmUpdate: Confirmar + Atualizar
+      additions: 'Adicionados:'
+      deletions: 'Deletados:'
+      maxValue: 'Valor Máx alterado:'
+      type: 'Tipo alterado:'
+      typeReset: 'Tipo alterado (atributos serão resetados):'
+      cosmetic: 'Mudanças Cosméticas (nomes ou descrições):'
+      options: 'Opções da Lista alteradas (valores serão preservados):'
+      noteChangesDetected: 'Mudanças foram detectadas em um ou
+        mais dos seus tipos de atores. Reveja as alterações abaixo e escolha uma das seguintes
+        opções:'
+      noteConfirm: Confirmar sem atualizar os atores existentes
+      noteConfirmUpdate: Confirmar e atualizar os atores existentes
+      noteConfirmUpdateBold: 'NOTA: Valores nos atributos deletados
+        serão deletados permanentemente'
+      noteCancel: Cancelar e evitar as alterações serem salvas
+  Messages:
+    sheetConfig:
+      reset: Resetar configuração da Ficha.
+      noConfig: Nenhuma configuração de ficha foi inserida.
+      rollFormulaRequired: "'rollFormula' é obrigatório."
+      rollResultsRequired: "'rollResults' é obrigatório."
+      rollResultsIncorrect: "'rollResults' inserido incorretamente."
+      actorTypeRequired: tipo de ator é obrigatório.
+      statString1: Atributo
+      statString2: precisa ser um texto, como "Frio"
+      statsRequired1: "'stats' são obrigatórios para"
+      statsRequired2: grupo.
+      groupAttributes: precisa ser um grupo de atributos.
+      attribute: Atributo
+      attributeType: 'precisa ser de um dos seguintes tipos:'
+      attributeTypeNull: não tem um tipo (podem ser opções que
+        tiveram a origem renomeada).
+      attributeMax: precisa incluir uma propriedade 'max'.
+      attributeOptions: precisa incluir um grupo 'options'
+      attributeOptionsEmpty: precisa incluir pelo menos uma opção
+        no grupo 'options'.
+      moveTypes: é obrigatório e precisa ter pelo menos um tipo.
+      equipmentTypes: é obrigatório e precisa ter pelo menos um
+        tipo de equipamento.
+  Common:
+    Description: Descrição
+    Details: Detalhes
+    Name: Nome
+  Prompt: Mensagem
+  PromptTitle: Insira o modificador
+  Choices: Escolhas
+  Dialog:
+    Prompt1: Escolha um modificador para esse
+    Prompt2: movimento.
+    ChooseConditions: 'Escolha todos os modificadores condicionais que se
+      aplicam:'
+    Ask1: Escolha um Atributo para esse
+    Ask2: movimento.
+  RollMove: Rolagem de Movimento
+  RollMode: "Modo de Rolagem"
+  Ask: Perguntar
+  AskTitle: Escolha um Atributo
+  Formula: Fórmula de Rolagem Customizada
+  PBTA_OTHER: Outros
+  MoveType: Tipo de Movimento
+  EquipmentType: Tipo de Equipamento
+  Description: Descrição
+  Moves: Movimentos
+  Biography: Biografia
+  Equipment: Equipamento
+  Tags: Rótulos
+  TagsHelp: "(Use tab para autocompletar, vírgula para criar novos rótulos e clique
+    duplo num rótulo para editá-lo)"
+  Roll: Rolar
+  Modifier: Modificador
+  RollFormula: Fórmula de Rolagem
+  RequiresMove: Requer Movimento
+  Quantity: Quantidade
+  Qty: Qtd
+  Weight: Peso
+  Wt: Peso
+  Uses: Usos
+  MoveGroup: Grupo do Movimento
+  MoveGroupHelp: Movimentos com o mesmo nome de grupo serão opções quando estiver
+    criando um personagem usando o criador de personagens.
+  Forward: Adiante
+  Ongoing: Constante
+  RollFormulaOverride: Rolar com a Fórmula
+  Create: Criar
+  New: Novo
+  NoTemplate: Sem Modelo
+  Normal: Normal
+  Advantage: Vantagem
+  Disadvantage: Desvantagem
+  ConditionsApplied: "Condições Aplicadas:"
+  ViewPlaybook: "Ver cartilha"

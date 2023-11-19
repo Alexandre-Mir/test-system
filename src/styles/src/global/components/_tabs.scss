@@ -1,0 +1,32 @@
+.tabs {
+  border-bottom: 2px solid $c-black;
+  border-top: 0;
+  height: 37px;
+  padding: 0 20px;
+
+  .item {
+    border-radius: 4px 4px 0 0;
+    background: #999;
+    color: $c-white;
+    margin: 0 10px;
+    padding: 4px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    font-size: 18px;
+    flex: 1;
+
+    &:hover,
+    &:focus {
+      background: #BBB;
+      color: $c-black;
+      text-shadow: none;
+    }
+
+    &.active {
+      background: $c-black;
+      color: $c-white;
+      text-shadow: none;
+      font-weight: bold;
+    }
+  }
+}

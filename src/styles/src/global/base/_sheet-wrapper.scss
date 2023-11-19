@@ -1,0 +1,287 @@
+.sheet-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100%;
+
+  .tox-edit-area {
+    min-height: 170px;
+  }
+
+  .sheet-header {
+    // Use 101% to force a line break;
+    width: 101%;
+    order: 0;
+    margin-bottom: 10px;
+    max-height: 80px;
+    min-height: 50px;
+
+    input {
+      &::placeholder {
+        color: $c-navy-top;
+      }
+    }
+  }
+
+  .sheet-notifications {
+    width: 101%;
+
+    .error,
+    .warning {
+      margin-bottom: 10px;
+    }
+  }
+
+  .sheet-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sheet-attributes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sheet-attributes-top {
+    border: 2px solid $ct-gray;
+    border-left: 0;
+    border-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px 0;
+
+    .cell--attributes-top {
+      display: flex;
+      // display: grid;
+      // grid-column: span 16;
+      // grid-template-columns: repeat(16, minmax(0, 1fr));
+      // gap: 0px 16px;
+      margin: 0;
+      padding: 0;
+
+      .cell {
+        position: relative;
+        grid-column: span 4;
+        flex: 1;
+        padding: 0 16px 0 0;
+      }
+
+      > .cell + .cell {
+        &::before {
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -9px;
+          bottom: 0;
+          width: 2px;
+          background: $ct-gray;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  .cell--image {
+    flex: 0 0 158px;
+  }
+
+  .cell--stats {
+    flex: 1;
+  }
+
+  .sheet-bottom {
+    display: grid;
+    grid-column: span 4 / span 4;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0px 16px;
+    margin: 0 0 16px 0;
+    padding: 0;
+    width: 100%;
+    // height: calc(100% - 80px);
+
+    .sheet-look {
+      width: auto;
+      max-width: 100%;
+      grid-column: 1 / span 1;
+      height: 100%;
+      position: relative;
+
+      &::before {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -9px;
+        bottom: 0;
+        width: 2px;
+        background: $ct-gray;
+      }
+    }
+
+    .sheet-main {
+      width: auto;
+      max-width: 100%;
+      grid-column: 2 / span 3;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .sheet-body {
+      flex: 1;
+    }
+
+    .cell--bio {
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+
+      .editor {
+        min-height: calc(100% - 30px);
+      }
+    }
+
+  }
+
+  .cell--LongText {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    min-height: 60px;
+
+    .cell__title {
+      flex: 0;
+    }
+
+    .editor,
+    .editor-content {
+      flex: 1;
+      min-height: 30px;
+    }
+
+    .tox-tinymce,
+    .tox-editor-container,
+    .tox-sidebar-wrap,
+    .tox-edit-area {
+      min-height: 170px;
+      height: 100% !important;
+    }
+
+    .tox-tinymce {
+      height: 100% !important;
+
+      .tox-toolbar-overlord,
+      .tox-toolbar__primary {
+        background: transparent;
+        border-bottom: 1px solid $c-black;
+      }
+
+      button {
+        font-size: 12px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        margin: 0;
+        width: auto;
+        height: auto;
+      }
+
+      button[title="Formats"],
+      button[title="Table"],
+      button[title="Horizontal line"],
+      button[title="Insert/edit link"] {
+        display: none;
+      }
+    }
+  }
+
+  // .sheet-look {
+  //   flex: 33% 1 1;
+  //   order: 1;
+  //   max-width: 33%;
+  //   transition: max-width ease-in-out 0.25s;
+  //   display: flex;
+  //   flex-direction: row;
+  //   flex-wrap: nowrap;
+  //   align-items: stretch;
+  //   height: calc(100% - 80px);
+
+  //   .cell--aesthetics {
+  //     transition: max-width ease-in-out 0.25s;
+  //     max-width: 100%;
+  //   }
+
+  //   &.closed {
+  //     max-width: 40px;
+  //     overflow: hidden;
+  //     padding: 0;
+
+  //     .cell--aesthetics {
+  //       max-width: 0%;
+  //       overflow: hidden;
+  //     }
+  //   }
+
+  //   .toggle--look {
+  //     flex: 20px 1 1;
+  //     margin: 0 10px;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: center;
+  //     background: transparent;
+  //     transition: all ease-in-out 0.25s;
+  //     height: 225px;
+
+  //     &:hover {
+  //       background: #bbb;
+  //     }
+
+  //     &:focus {
+  //       box-shadow: none;
+  //     }
+
+  //     &.closed {
+  //       margin-left: 0;
+  //     }
+
+  //     .fas {
+  //       transition: all ease-in-out 0.25s;
+  //     }
+
+  //     &.closed {
+  //       .fas {
+  //         transform: rotate(180deg);
+  //       }
+  //     }
+  //   }
+  // }
+
+  // .sheet-main {
+  //   flex: 66% 1 1;
+  //   order: 2;
+  //   height: calc(100% - 80px);
+  // }
+
+  .editor-content {
+    height: 100%;
+    overflow-y: auto;
+    word-break: break-word;
+    background: rgba(0, 0, 0, 0.075);
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+
+  .sheet-body {
+
+    .tab,
+    .sheet-tab {
+      height: 100%;
+    }
+  }
+}

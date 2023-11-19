@@ -1,0 +1,134 @@
+Powered by the Apocalypse: "Powered by the Apocalypse"
+PBTA:
+  Advantage: "Ventaja"
+  Ask: "Consultar"
+  AskTitle: "Elige un atributo"
+  Biography: "Biografía"
+  Choices: "Choices"
+  ConditionsApplied: "Estados aplicados:"
+  Create: "Crear"
+  Description: "Descripción"
+  description: "Disfruta de cualquier juego PbtA en FoundryVTT!"
+  Disadvantage: "Desventaja"
+  Equipment: "Equipo"
+  EquipmentType: "Tipo de equipo"
+  failure: "Complicaciones (marca PX)"
+  Formula: "Fórmula de tirada personalizada"
+  Forward: "Siguiente"
+  Modifier: "Modificador"
+  MoveGroup: "Grupo de movimiento"
+  MoveGroupHelp: "Varios movimientos con el mismo grupo de movimientos serán seleccionables al crear un nuevo personaje con el creador de personajes."
+  Moves: "Movimientos"
+  MoveType: "Tipo de movimiento"
+  Name: "Nombre"
+  New: "Nuevo"
+  Normal: "Normal"
+  NoTemplate: "Sin plantilla"
+  Ongoing: "Continuo"
+  partial: "Éxito parcial"
+  Playbook: "Libreto"
+  Prompt: "Mensaje"
+  PromptTitle: "Introduce el modificador"
+  Qty: "Cant"
+  Quantity: "Cantidad"
+  RequiresMove: "Requiere movimiento"
+  Roll: "Tirada"
+  RollFormula: "Fórmula de tirada"
+  RollFormulaOverride: "Sustitución de fórmula de tirada"
+  RollMove: "Tirar movimiento"
+  RollMode: "Modo de Tirada"
+  success: "Éxito"
+  Tags: "Etiquetas"
+  TagsHelp: "(Utiliza el tabulador para autocompletar, las comas para crear nuevas etiquetas y hacer doble clic en una etiqueta para editarla.)"
+  title: "Powered by the Apocalypse"
+  Type: "Tipo"
+  Uses: "Usos"
+  ViewPlaybook: "View playbook"
+  Weight: "Peso"
+  Wt: "Ps"
+  Common:
+    Description: "Descripción"
+    Details: "Detalles"
+    Name: "Nombre"
+  Dialog:
+    Ask1: "Elige un atributo para este"
+    Ask2: "movimiento."
+    ChooseConditions: "Elige los modificadores de estado que correspondan:"
+    Prompt1: "Elige el modificador para este"
+    Prompt2: "movimiento."
+  Messages:
+    sheetConfig:
+      actorTypeRequired: "se requiere el tipo de actor."
+      attribute: "Atributo"
+      attributeMax: "debe incluir la propiedad 'max'."
+      attributeOptions: "debe incluir un grupo 'opciones'."
+      attributeOptionsEmpty: "debe incluir al menos una opción del grupo 'opciones'."
+      attributeType: "debe ser uno de los siguientes tipos:"
+      attributeTypeNull: "no tiene un tipo (pueden ser opciones que tenían el original renombrado)."
+      equipmentTypes: "es obligatorio y debe tener al menos un tipo de equipo."
+      groupAttributes: "debe ser un grupo de atributos."
+      moveTypes: "es obligatorio y debe tener al menos un tipo de movimiento."
+      noConfig: "No se ha introducido ninguna configuración de ficha."
+      reset: "Restablecer la configuración de la ficha."
+      rollFormulaRequired: "'rollFormula' es obligatorio."
+      rollResultsIncorrect: "'rollResults' introducido incorrectamente."
+      rollResultsRequired: "'rollResults' es obligatorio"
+      statsRequired1: "'stats' se requieren para"
+      statsRequired2: "grupo."
+      statString1: "Estadística"
+      statString2: "tiene que ser texto, como \"Frialdad\""
+      tomlError: "Hay un error sintáctico en línea {line} columna {column} en la configuración del TOML. Consulta la consola para más detalles."
+  Settings:
+    button:
+      help: "Ayuda y Tutorial del PbtA System"
+    stats:
+      name: "Estadísticas"
+      hint: "Introduce una lista de estadísticas/características separadas por comas, como \"Fue,Des,Con,Int,Sab,Car\""
+    advForward:
+      name: "Quitar VEN/DES tras las tiradas"
+      hint: "Al activar esta opción, las opciones de ventaja y desventaja de la hoja de personaje volverán a normal tras cada tirada (similar a Siguiente)."
+    hideRollFormula:
+      name: Ocultar fórmula de la tirada
+      hint: Oculta el input de la fórmula de tirada personalizada en las hojas de personaje.
+    hideForward:
+      name: Ocultar siguiente
+      hint: Oculta el input de siguiente input en las hojas de personaje.
+    hideOngoing:
+      name: Ocultar continuo
+      hint: Oculta el input de continuo input en las hojas de personaje.
+    hideRollMode:
+      name: Ocultar modo de tirada
+      hint: Oculta la sustitución de fórmula de tirada (normal/ventaja/desventaja) en las hojas de personaje.
+    hideUses:
+      name: Ocultar usos
+      hint: Oculta los usos restantes de cada movimiento en el resumen de movimientos de personajes y PNJs.
+    itemIcons:
+      name: "Activar iconos de objetos"
+      hint: "Muestra los iconos de los movimientos, conjuros y equipo en las hojas de personaje (requiere recargar el navegador).."
+    sheetConfig:
+      label: "Configuración de la Ficha PbtA"
+      name: "Configurar hojas de personaje"
+      hint: "Elige la estructura de datos para las hojas de personaje, como estadísticas, características y detalles."
+      additions: "Añadidos:"
+      confirm: "Confirmar"
+      confirmChanges: "Confirmar los cambios"
+      confirmUpdate: "Confirmar + Actualizar"
+      cosmetic: "Cambios cosméticos (títulos o descripciones):"
+      deletions: "Eliminados:"
+      maxValue: "Cambió el valor máximo:"
+      noteCancel: "Cancelar e impedir que se guarden los cambios"
+      noteChangesDetected: "Se han producido cambios en uno o más de los tipos de actor. Revisa los cambios a continuación y luego elige una de las siguientes opciones:"
+      noteConfirm: "Confirmar sin actualizar los actores existentes"
+      noteConfirmUpdate: "Confirmar y actualizar los actores existentes"
+      noteConfirmUpdateBold: "NOTA: Los datos existentes en los atributos eliminados se borrarán permanentemente"
+      notes1: "¡Bienvenido a la versión alpha del sistema PbtA!"
+      notes2: "Con el tiempo crearemos una interfaz gráfica de usuario (GUI) para crear hojas de personaje, pero por ahora tendrás que introducir los datos de la hoja de personaje en formato TOML. Escribir TOML es similar a trabajar con archivos .ini habituales en la configuración de mods para juegos de PC."
+      notes3: "Lee la documentación enlazada a continuación antes de configurar tu ficha. También puedes dirigirte al canal #powered-by-the-apocalypse del Discord principal de Foundry Virtual Tabletop para resolver dudas y obtener ayuda."
+      options: "List options changed (values will be preserved):"
+      resetDefaults: "Restablecer a predeterminados"
+      saveConfiguration: "Guardar configuración"
+      title: "Configurar hojas de personaje"
+      type: "Tipo cambiado:"
+      typeReset: "Tipo cambiado (se restablecerá el atributo):"
+      sheetConfigDisabledModule: "La configuración de la ficha se ha desactivado debido a un módulo que la proporciona."
+PBTA_OTHER: "Otro"
