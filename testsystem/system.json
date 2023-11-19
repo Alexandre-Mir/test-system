@@ -24,8 +24,8 @@
   ],
   "gridDistance": 5,
   "gridUnits": "ft",
-  "primaryTokenAttribute": "null",
-  "secondaryTokenAttribute": "null",
+  "primaryTokenAttribute": "",
+  "secondaryTokenAttribute": "",
   "url": "https://github.com/Alexandre-Mir/test-system",
   "manifest": "https://raw.githubusercontent.com/Alexandre-Mir/test-system/main/testsystem/system.json",
   "download": "https://github.com/Alexandre-Mir/test-system/releases/download/teste/testsystem.zip"
