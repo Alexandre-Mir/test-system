@@ -1,0 +1,32 @@
+{
+  "id": "testsystem",
+  "title": "Test System",
+  "description": "Testando",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": 10,
+    "verified": "11",
+    "maximum": 11
+  },
+  "authors": [{
+    "name": "Alexandre"
+  }],
+  "esmodules": ["module/teste.js"],
+  "styles": ["css/teste.css"],
+  "scripts": [],
+  "packs": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "null",
+  "secondaryTokenAttribute": "null",
+  "url": "",
+  "manifest": "",
+  "download": ""
+}
