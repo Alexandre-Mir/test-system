@@ -27,6 +27,6 @@
   "primaryTokenAttribute": "null",
   "secondaryTokenAttribute": "null",
   "url": "",
-  "manifest": "",
+  "manifest": "https://raw.githubusercontent.com/Alexandre-Mir/test-system/main/testsystem/system.json",
   "download": ""
 }
