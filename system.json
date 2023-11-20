@@ -66,8 +66,7 @@
   "secondaryTokenAttribute": null,
   "initiative": "1d20",
   "socket": true,
-  "url": "https://asacolips.gitbook.io/pbta-system/",
-  "manifest": "https://asacolips-artifacts.s3.amazonaws.com/pbta/master/system.json",
-  "download": "https://asacolips-artifacts.s3.amazonaws.com/pbta/0.7.3/pbta.zip",
-  "changelog": "https://gitlab.com/asacolips-projects/foundry-mods/pbta/-/raw/master/CHANGELOG.md"
+  "url": "https://github.com/Alexandre-Mir/test-system",
+  "manifest": "https://raw.githubusercontent.com/Alexandre-Mir/test-system/main/system.json",
+  "download": "https://github.com/gonzaPaEst/root/releases/download/teste/test-system.zip"
 }
